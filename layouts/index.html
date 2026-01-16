@@ -1,0 +1,25 @@
+{{ define "main" }}
+<div class="home">
+    <section class="intro">
+        <h1>Hey, I'm Cam.</h1>
+        <p>{{ .Site.Params.description }}</p>
+    </section>
+
+    <section class="posts">
+        <h2>Recent</h2>
+        {{ $allPages := where .Site.RegularPages "Type" "in" (slice "posts" "faith" "tech" "fitness") }}
+        {{ range first 10 (sort $allPages "Date" "desc") }}
+        <article class="post-preview">
+            <span class="post-section">{{ .Section }}</span>
+            <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+            <div class="post-meta">
+                <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+                {{ if $.Site.Params.showReadingTime }}
+                <span class="reading-time">· {{ math.Round (div (countwords .Content) 200.0) }} min</span>
+                {{ end }}
+            </div>
+        </article>
+        {{ end }}
+    </section>
+</div>
+{{ end }}

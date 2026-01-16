@@ -1,0 +1,53 @@
+baseURL = "https://tyrminal.com/"
+languageCode = "en-us"
+title = "Tyrminal"
+
+[params]
+  author = "Cameron Hopkin"
+  description = "Faith, fitness, and the occasional tech rant."
+  tagline = "Navigating the journey"
+
+  # Social links
+  github = "https://github.com/cameronhopkin"
+  linkedin = "https://linkedin.com/in/cameronhopkin"
+
+  showReadingTime = true
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 2
+  [[menu.main]]
+    name = "Faith"
+    url = "/faith/"
+    weight = 3
+  [[menu.main]]
+    name = "Fitness"
+    url = "/fitness/"
+    weight = 4
+  [[menu.main]]
+    name = "Tech"
+    url = "/tech/"
+    weight = 5
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = false
+    style = "monokai"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+
+[taxonomies]
+  tag = "tags"
