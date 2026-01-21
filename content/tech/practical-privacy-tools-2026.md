@@ -12,7 +12,7 @@ January 21, 2026 · 9 min read
 
 #Privacy #Cybersecurity #Tools
 
-*Part 2 of 2 — [Part 1: The State of Privacy](/state-of-privacy-2026)*
+*Part 2 of 2 — [Part 1: The State of Privacy](/tech/state-of-privacy-2026/)*
 
 In Part 1, I covered the problem: a $300 billion data broker industry, no federal privacy law, and a digital ecosystem designed to track everything you do.
 

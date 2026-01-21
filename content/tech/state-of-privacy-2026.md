@@ -12,7 +12,7 @@ January 21, 2026 · 8 min read
 
 #Privacy #Cybersecurity #DataBrokers
 
-*Part 1 of 2 — [Part 2: Tools That Actually Work](/practical-privacy-tools-2026)*
+*Part 1 of 2 — [Part 2: Tools That Actually Work](/tech/practical-privacy-tools-2026/)*
 
 I've been in cybersecurity for over two decades. I've watched the industry evolve from "don't click suspicious links" to a $300 billion surveillance economy that most people don't even know exists.
 
@@ -153,7 +153,7 @@ Your privacy is worth the effort.
 
 ---
 
-**Continue to [Part 2: Practical Privacy Tools That Actually Work](/practical-privacy-tools-2026)**
+**Continue to [Part 2: Practical Privacy Tools That Actually Work](/tech/practical-privacy-tools-2026/)**
 
 ---
 
