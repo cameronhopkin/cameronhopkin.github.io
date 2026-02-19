@@ -156,3 +156,4 @@ Also: twenty minutes of vimtutor. The editor is part of the craft.
 *Day 2 of 365. The type system is not a convenience. It is a contract
 between you and the machine.*
 
+
