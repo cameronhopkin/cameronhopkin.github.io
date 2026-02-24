@@ -1,6 +1,6 @@
 ---
 title: "Day 007 Earning It Clean"
-date: 2026-02-24T12:00:00-05:00
+date: 2026-02-24T10:30:00-05:00
 draft: false
 tags: ["c", "knr", "state-tracking", "testing"]
 description: "Rebuilding exercise 1-10 from scratch, word counting with state machines, and threat modeling a 20-line program."
