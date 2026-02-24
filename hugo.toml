@@ -1,6 +1,7 @@
 baseURL = "https://tyrminal.com/"
 languageCode = "en-us"
 title = "Tyrminal"
+buildFuture = true
 
 [params]
   author = "Cameron Hopkin"
