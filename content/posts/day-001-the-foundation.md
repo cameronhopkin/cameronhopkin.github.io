@@ -44,7 +44,7 @@ It ran. One line printed to the terminal.
 
 While it may sound trivial it is not. What actually happened: I wrote
 instructions in a human-readable language, a compiler translated those
-instructions into ARM64 binary that my chip understands, the OS loaded
+instructions into machine code that my processor understands, the OS loaded
 that binary into memory, and the CPU executed it instruction by instruction.
 
 Every program that has ever run on any computer follows that same basic chain.

@@ -44,7 +44,7 @@ byte. `short` is usually two. `int` is usually four. `long` is four or
 eight depending on the platform. `float` is four bytes. `double` is eight.
 
 The important part: C does not guarantee sizes. `int` is defined as "at
-least 16 bits." On my M1 Mac it is 32 bits. On the PDP-11 where C was
+least 16 bits." On my machine it is 32 bits. On the PDP-11 where C was
 born it was 16. The language was designed to run on any hardware. If you
 need exact sizes — and in security work you almost always do — you use
 types like `int32_t` and `uint8_t` from `stdint.h`.
