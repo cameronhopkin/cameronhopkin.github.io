@@ -1,6 +1,6 @@
 ---
 title: "Seven Weeks After the Post"
-date: 2026-03-04
+date: 2026-03-04T08:00:00-05:00
 draft: false
 tags: ["faith", "dpe", "perseverance", "discipline"]
 description: "The January post was the testimony. This is what happens after."

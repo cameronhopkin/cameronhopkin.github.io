@@ -1,6 +1,6 @@
 ---
 title: "112 Pounds and a Sword"
-date: 2026-03-04
+date: 2026-03-04T08:30:00-05:00
 draft: false
 tags: ["fitness", "weight-loss", "iaido", "training", "discipline"]
 description: "From 401 to 289. What changes when the weight comes off and the sword goes on."
