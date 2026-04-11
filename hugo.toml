@@ -35,6 +35,10 @@ buildFuture = true
     name = "Tech"
     url = "/tech/"
     weight = 5
+  [[menu.main]]
+    name = "Forge Log"
+    url = "/forge-log/"
+    weight = 6
 
 [markup]
   [markup.highlight]
@@ -52,3 +56,4 @@ buildFuture = true
 
 [taxonomies]
   tag = "tags"
+  series = "series"

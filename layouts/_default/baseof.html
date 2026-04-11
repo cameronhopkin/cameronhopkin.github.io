@@ -21,6 +21,7 @@
         {{- else if eq .Section "fitness" -}}{{- $ogImage = "images/og/fitness_og.png" -}}
         {{- else if eq .Section "tech" -}}{{- $ogImage = "images/og/tech_og.png" -}}
         {{- else if eq .Section "posts" -}}{{- $ogImage = "images/og/posts_og.png" -}}
+        {{- else if eq .Section "forge-log" -}}{{- $ogImage = "images/og/forge_log_og.png" -}}
         {{- end -}}
       {{- end -}}
     {{- else if .IsSection -}}
@@ -28,6 +29,7 @@
       {{- else if eq .Section "fitness" -}}{{- $ogImage = "images/og/fitness_og.png" -}}
       {{- else if eq .Section "tech" -}}{{- $ogImage = "images/og/tech_og.png" -}}
       {{- else if eq .Section "posts" -}}{{- $ogImage = "images/og/posts_og.png" -}}
+      {{- else if eq .Section "forge-log" -}}{{- $ogImage = "images/og/forge_log_og.png" -}}
       {{- end -}}
     {{- end -}}
     <meta property="og:image" content="{{ $ogImage | absURL }}">
