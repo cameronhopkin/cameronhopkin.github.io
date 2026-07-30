@@ -149,6 +149,23 @@ body {
     color: var(--accent);
 }
 
+/* Section intro */
+.section-intro {
+    margin-bottom: 2.5rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--accent-green);
+    color: var(--text-muted);
+}
+
+.section-intro p {
+    margin-bottom: 0.75rem;
+}
+
+.section-intro p:last-child {
+    margin-bottom: 0;
+    color: var(--text);
+}
+
 /* Post previews */
 .post-preview {
     margin-bottom: 1.25rem;
