@@ -30,7 +30,7 @@ The assignment was thirty minutes of silence and five questions. I am putting th
 
 I am afraid God will call me away from the thing I am already doing and already succeeding at in His name, and make me start over.
 
-Twenty years sits under that. The certifications. Two master's degrees and an MBA in progress. The company. Competence I can prove on paper to anyone who asks. If He moves me, I am a beginner again, and a beginner has no move. He cannot act in his own power. He has to be carried.
+Twenty years sits under that. The certifications. A master's degree and an MBA in progress. The company. Competence I can prove on paper to anyone who asks. If He moves me, I am a beginner again, and a beginner has no move. He cannot act in his own power. He has to be carried.
 
 That is the fear, and it is the same fear that put fifty-three thousand dollars on my books. It was never about money. It is about having nothing in my hands and waiting on someone else to act. The debt was just the shape the fear took when I had a checkbook. Here it takes the shape of a calling.
 
@@ -149,3 +149,7 @@ Week two starts with a lead I let go cold and a phone that is not ringing. That 
 ---
 
 *I asked God to move. He answered with silence. I am learning that silence is not the same as no, and waiting is not the same as quitting.*
+
+---
+
+*Correction, August 13, 2026: this post originally read "two master's degrees and an MBA in progress." That was wrong when I wrote it. At the time I had one master's degree and an MBA in progress. The MBA conferred on August 10, so it is two now, but the sentence was inaccurate on the day it published and I am not going to quietly fix it.*
