@@ -45,6 +45,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+    {{ if .Site.Params.aiDisclosure }}
+    <meta name="generator-ai" content="{{ .Site.Params.aiModel }}">
+    {{ end }}
     {{ range .AlternativeOutputFormats -}}
         {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
     {{ end -}}
@@ -67,7 +70,15 @@
         </main>
 
         <footer class="site-footer">
-            <p>&copy; {{ now.Year }} {{ .Site.Params.author }}</p>
+            <div class="footer-primary">
+                {{ if .Site.Params.aiDisclosure }}
+                <p class="footer-ai-disclosure">
+                    {{ .Site.Params.aiDisclosureLong }}
+                    <a href="{{ .Site.Params.aiDisclosureURL | relURL }}">More on how this site is made</a>
+                </p>
+                {{ end }}
+                <p class="footer-copyright">&copy; {{ now.Year }} {{ .Site.Params.author }}</p>
+            </div>
             <div class="footer-links">
                 {{ with .Site.Params.github }}<a href="{{ . }}">GitHub</a>{{ end }}
                 {{ with .Site.Params.linkedin }}<a href="{{ . }}">LinkedIn</a>{{ end }}

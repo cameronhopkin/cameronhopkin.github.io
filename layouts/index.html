@@ -3,6 +3,11 @@
     <section class="intro">
         <h1>Hey, I'm Cam.</h1>
         <p>{{ .Site.Params.description }}</p>
+        {{ if .Site.Params.aiDisclosure }}
+        <p class="hero-ai-disclosure">
+            <a href="{{ .Site.Params.aiDisclosureURL | relURL }}">{{ .Site.Params.aiDisclosureShort }}</a>
+        </p>
+        {{ end }}
     </section>
 
     {{/* Faith */}}

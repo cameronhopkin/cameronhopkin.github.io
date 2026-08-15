@@ -8,6 +8,15 @@ buildFuture = true
   description = "Faith, fitness, and the occasional tech rant."
   tagline = "Navigating the journey"
 
+  # AI transparency disclosure.
+  # Single boolean gate: setting aiDisclosure = false removes every instance
+  # site wide. Wording lives here so it can change in one place.
+  aiDisclosure = true
+  aiDisclosureShort = "Written by me. Processed through Claude."
+  aiDisclosureLong = "Every post on this site is written by Cameron Hopkin. Drafting, editing, and publishing are done with Anthropic's Claude in the loop. The thinking, the facts, the numbers, and the theology are mine."
+  aiDisclosureURL = "/ai/"
+  aiModel = "Claude (Anthropic)"
+
   # Social links
   github = "https://github.com/cameronhopkin"
   linkedin = "https://linkedin.com/in/cameronhopkin"

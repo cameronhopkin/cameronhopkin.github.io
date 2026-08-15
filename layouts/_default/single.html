@@ -22,6 +22,14 @@
         {{ .Content }}
     </div>
 
+    {{/* Optional per-post disclosure override. Tags render in the header on
+         this site, so this sits at the end of the body rather than above them.
+         The site level footer disclosure still renders; this adds post
+         specific detail rather than replacing it. */}}
+    {{ if and .Site.Params.aiDisclosure .Params.aiDisclosureNote }}
+    <p class="post-ai-note">{{ .Params.aiDisclosureNote }}</p>
+    {{ end }}
+
     <footer class="post-footer">
         <a href="{{ .Site.BaseURL }}">← Back</a>
     </footer>
