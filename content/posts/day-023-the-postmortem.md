@@ -20,7 +20,7 @@ The important thing K&R says in 2.12 is that precedence and order of evaluation 
 
 That distinction matters because the whole chapter has been building toward it. The sequence point work from Day 20 lives here. The `i++` and `a[i] = i++` conversations live here. Precedence told us how to read the expression. It never told us when the side effect fires.
 
-We built a full annotated precedence table as a permanent reference — every row flagged with the security trap it carries. It is below. I plan to keep it close.
+We built a full annotated precedence table as a permanent reference, every row flagged with the security trap it carries. It is below. I plan to keep it close.
 
 After the table we ran a live audit. Four lines:
 
@@ -60,9 +60,9 @@ The line is the modification. Not the order.
 
 The distinction between unspecified and undefined behavior is the one I got wrong today, so that is what I want to make sure I actually own.
 
-Unspecified behavior: the standard allows multiple outcomes and does not say which one you get. The compiler picks. The result may vary by platform or optimization level. The program is still legal. Think of it as the compiler choosing which lane to drive in — either lane gets you there, and the standard just does not say which one it will pick.
+Unspecified behavior: the standard allows multiple outcomes and does not say which one you get. The compiler picks. The result may vary by platform or optimization level. The program is still legal. Think of it as the compiler choosing which lane to drive in. Either lane gets you there, and the standard just does not say which one it will pick.
 
-Undefined behavior is different in kind, not just degree. When you write `f(i, i++)`, you are modifying `i` and reading `i` with no sequence point between them. The C standard does not say "the compiler picks an order." It says the assumption embedded in the standard is that well-formed programs do not contain this. The compiler is permitted to assume *you* will never write it. If you do, the standard makes no promises about what the resulting binary does — not just "unpredictable output" but the compiler may legally eliminate code, reorder operations, or produce instructions that have nothing to do with what you wrote.
+Undefined behavior is different in kind, not just degree. When you write `f(i, i++)`, you are modifying `i` and reading `i` with no sequence point between them. The C standard does not say "the compiler picks an order." It says the assumption embedded in the standard is that well-formed programs do not contain this. The compiler is permitted to assume *you* will never write it. If you do, the standard makes no promises about what the resulting binary does. Not just "unpredictable output" but the compiler may legally eliminate code, reorder operations, or produce instructions that have nothing to do with what you wrote.
 
 The security implication is the part that took me a while to fully absorb: a compiler optimizing around undefined behavior is not doing something wrong. It is doing exactly what the standard permits. The undefined state is mine. I put it there.
 
@@ -78,15 +78,15 @@ K&R §2.12. Higher row binds tighter. Operators in the same row have equal prece
 | 4 | `+` `-` | left to right | Additive (binary). ⚠ Signed overflow is undefined behavior. |
 | 5 | `<<` `>>` | left to right | Bitwise shift. ⚠ Left shift into sign bit: UB. Right shift of signed: impl-defined. |
 | 6 | `<` `<=` `>` `>=` | left to right | Relational. Result is 0 or 1. |
-| 7 | `==` `!=` | left to right | Equality — lower precedence than relational. ⚠ `a < b == c < d` groups as `(a<b) == (c<d)`, not a range check. |
-| 8 | `&` | left to right | Bitwise AND — lower than `==`. ⚠ `x & mask == 0` parses as `x & (mask==0)`. Always parenthesize bitwise subexpressions. |
+| 7 | `==` `!=` | left to right | Equality, lower precedence than relational. ⚠ `a < b == c < d` groups as `(a<b) == (c<d)`, not a range check. |
+| 8 | `&` | left to right | Bitwise AND, lower than `==`. ⚠ `x & mask == 0` parses as `x & (mask==0)`. Always parenthesize bitwise subexpressions. |
 | 9 | `^` | left to right | Bitwise XOR. |
 | 10 | `\|` | left to right | Bitwise OR. |
-| 11 | `&&` | left to right | Logical AND — short-circuits. Left-to-right order is guaranteed (sequence point). |
-| 12 | `\|\|` | left to right | Logical OR — short-circuits. Same guarantee. |
+| 11 | `&&` | left to right | Logical AND, short-circuits. Left-to-right order is guaranteed (sequence point). |
+| 12 | `\|\|` | left to right | Logical OR, short-circuits. Same guarantee. |
 | 13 | `?:` | **right to left** | Conditional. ⚠ Both arms must have compatible types; implicit conversion can hide truncation. |
 | 14 | `=` `+=` `-=` `*=` `/=` `%=` `&=` `^=` `\|=` `<<=` `>>=` | **right to left** | Assignment. ⚠ Modifying a variable and using it elsewhere in the same expression without a sequence point: UB. |
-| 15 | `,` | left to right | Comma — evaluates left, discards, returns right. Rarely seen outside `for` loops. |
+| 15 | `,` | left to right | Comma: evaluates left, discards, returns right. Rarely seen outside `for` loops. |
 
 The warning K&R buries at the end of 2.12: the table controls parsing. It says nothing about when operands are evaluated. Function argument evaluation order is unspecified. Between sequence points, modifying a variable twice is undefined behavior regardless of what this table says.
 
@@ -108,7 +108,7 @@ Chapter 3: Control Flow.
 
 The overnight question I sat with: what happens in a `switch` when you omit `break`? I reasoned through it before opening the book. Fall-through. The CPU does not re-evaluate the condition. It continues executing instructions for the next case because `case` labels in C are just addresses, and nothing stops execution at a label. The `break` is the escape. Without it, the instruction pointer keeps moving.
 
-Chapter 3 will confirm or correct that. It will also introduce the dangling else problem — a different flavor of the same issue: the structure that looks obvious to a human is not what the parser sees.
+Chapter 3 will confirm or correct that. It will also introduce the dangling else problem, a different flavor of the same issue: the structure that looks obvious to a human is not what the parser sees.
 
 ---
 

@@ -3,7 +3,7 @@ title: "Day 18: Why 'A' Is Not A Character"
 date: 2026-03-07T00:00:00-05:00
 draft: false
 tags: ["c", "types", "operators", "escape-sequences", "short-circuit", "buffer-overflow"]
-description: "Closed the overnight question on why character constants are int, worked through sections 2.3 through 2.5, and wrote exercise 2-2 — the one where short-circuit evaluation turns out to be a security guarantee."
+description: "Closed the overnight question on why character constants are int, worked through sections 2.3 through 2.5, and wrote exercise 2-2, the one where short-circuit evaluation turns out to be a security guarantee."
 ---
 
 # Day 18: Why 'A' Is Not A Character

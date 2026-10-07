@@ -80,7 +80,7 @@ changed. It is not finding the element anymore. It is only narrowing.
 ### Is the one-test version faster?
 
 Not universally. The early-exit version wins whenever it finds the
-target before completing all iterations — on 8 elements, a hit on
+target before completing all iterations. On 8 elements, a hit on
 the second comparison costs less than always running to completion.
 The branch predictor argument is real, but only pays dividends when
 the misprediction penalty (15-20 cycles on modern silicon) consistently
@@ -101,7 +101,7 @@ an ambiguity. The two-character sequence `\n` in a log entry could
 mean "there was a real newline here" or "there was a backslash
 followed by the letter n." The reader cannot tell. An attacker who
 knows this types a literal backslash followed by `n` and the reader
-decodes it as a newline — slipping content through a filter that was
+decodes it as a newline, slipping content through a filter that was
 only watching for the real thing.
 
 The fix is mechanical. If `\` becomes `\\` in the escaped form, the

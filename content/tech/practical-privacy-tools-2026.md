@@ -12,11 +12,11 @@ January 21, 2026 · 9 min read
 
 #Privacy #Cybersecurity #Tools
 
-*Part 2 of 2 — [Part 1: The State of Privacy](/tech/state-of-privacy-2026/)*
+*Part 2 of 2: [Part 1: The State of Privacy](/tech/state-of-privacy-2026/)*
 
 In Part 1, I covered the problem: a $300 billion data broker industry, no federal privacy law, and a digital ecosystem designed to track everything you do.
 
-Now let's talk solutions. Not paranoid overkill—practical tools and habits that meaningfully reduce your exposure without requiring you to live off the grid.
+Part 1 was the problem. This part is solutions. Not paranoid overkill. Practical tools and habits that meaningfully reduce your exposure without requiring you to live off the grid.
 
 ## Email Aliases: The Highest-Impact Change
 
@@ -35,29 +35,29 @@ With aliases:
 
 **Tools:**
 
-[SimpleLogin](https://simplelogin.io/) — My primary recommendation. Now owned by Proton. Free tier gives you 10-15 aliases. Premium ($30/year) is unlimited with custom domains, PGP encryption, and more. Open source, independently audited.
+[SimpleLogin](https://simplelogin.io/): My primary recommendation. Now owned by Proton. Free tier gives you 10-15 aliases. Premium ($30/year) is unlimited with custom domains, PGP encryption, and more. Open source, independently audited.
 
-[Addy.io](https://addy.io/) — Solid open source alternative. Generous free tier.
+[Addy.io](https://addy.io/): Solid open source alternative. Generous free tier.
 
-[Firefox Relay](https://relay.firefox.com/) — Mozilla's offering. Simpler but more limited.
+[Firefox Relay](https://relay.firefox.com/): Mozilla's offering. Simpler but more limited.
 
 **The plus-sign trick doesn't cut it.** Using `yourname+shopping@gmail.com` is better than nothing, but trivial to strip. Your real email is exposed. True aliases provide actual separation.
 
-**My setup:** I organize aliases by category—`news@` for newsletters, `security@` for industry subscriptions, `shopping@` for retail, `finance@` for money-related accounts. Each routes to a folder. Intentional consumption, not reactive inbox chaos.
+**My setup:** I organize aliases by category: `news@` for newsletters, `security@` for industry subscriptions, `shopping@` for retail, `finance@` for money-related accounts. Each routes to a folder. Intentional consumption, not reactive inbox chaos.
 
 ## Get Off Free Email
 
-Gmail's business model is advertising. Google scans your emails to build a profile that advertisers pay to target. They're not selling your emails—they're using your emails to sell access to your attention.
+Gmail's business model is advertising. Google scans your emails to build a profile that advertisers pay to target. They're not selling your emails. They're using your emails to sell access to your attention.
 
 The same applies to Outlook.com, Yahoo, and other free providers. If you're not paying, you're the product.
 
 **Paid alternatives:**
 
-[ProtonMail](https://proton.me/mail) — Swiss-based, end-to-end encrypted, can't read your email contents even if compelled. Free tier available, paid plans start around $4/month. I covered their law enforcement limitations in Part 1—understand them, but for most people this is a massive upgrade from Gmail.
+[ProtonMail](https://proton.me/mail): Swiss-based, end-to-end encrypted, can't read your email contents even if compelled. Free tier available, paid plans start around $4/month. I covered their law enforcement limitations in Part 1. Understand them, but for most people this is a massive upgrade from Gmail.
 
-[Tutanota](https://tutanota.com/) — German-based alternative. Similar encryption model. Slightly cheaper.
+[Tutanota](https://tutanota.com/): German-based alternative. Similar encryption model. Slightly cheaper.
 
-[Fastmail](https://www.fastmail.com/) — Australian-based. Not end-to-end encrypted, but no advertising model. Strong on features and reliability.
+[Fastmail](https://www.fastmail.com/): Australian-based. Not end-to-end encrypted, but no advertising model. Strong on features and reliability.
 
 **Migration approach:**
 1. Create your new account and get comfortable with it
@@ -66,25 +66,25 @@ The same applies to Outlook.com, Yahoo, and other free providers. If you're not 
 4. Gradually migrate everything else
 5. Let the old account become a legacy catch-all
 
-This isn't a weekend project—it takes weeks to do properly. But the result is removing one of the biggest privacy compromises most people make daily.
+This isn't a weekend project. It takes weeks to do properly. But the result is removing one of the biggest privacy compromises most people make daily.
 
 ## DNS-Level Blocking
 
-Every website you visit starts with a DNS query—your device asking "what's the IP address for this domain?" By default, your ISP sees every one of these queries.
+Every website you visit starts with a DNS query, your device asking "what's the IP address for this domain?" By default, your ISP sees every one of these queries.
 
 Switching to a privacy-focused DNS with built-in blocking stops trackers and ads at the network level, before they ever reach your browser. This works across all apps, not just your browser.
 
 **Free options:**
 
-[NextDNS](https://nextdns.io/) — 300,000 queries/month free (plenty for most users). Blocks ads, trackers, malware. Customizable blocklists. Takes about 5 minutes to set up. Works on all devices.
+[NextDNS](https://nextdns.io/): 300,000 queries/month free (plenty for most users). Blocks ads, trackers, malware. Customizable blocklists. Takes about 5 minutes to set up. Works on all devices.
 
-[AdGuard DNS](https://adguard-dns.io/) — Completely free, no account required. Three modes: default (ads/trackers), family (adds adult content filtering), and non-filtering (just encrypted DNS).
+[AdGuard DNS](https://adguard-dns.io/): Completely free, no account required. Three modes: default (ads/trackers), family (adds adult content filtering), and non-filtering (just encrypted DNS).
 
-[Quad9](https://quad9.net/) — Free, nonprofit. Blocks malicious domains. Based in Switzerland. Strong privacy policy but no ad blocking.
+[Quad9](https://quad9.net/): Free, nonprofit. Blocks malicious domains. Based in Switzerland. Strong privacy policy but no ad blocking.
 
 **Setup:** You can configure DNS per-device, or set it at your router level for whole-home coverage. Most services provide setup guides for every platform.
 
-DNS blocking won't catch everything—sophisticated trackers can bypass it—but it stops a huge amount of garbage before it touches your device.
+DNS blocking won't catch everything (sophisticated trackers can bypass it), but it stops a huge amount of garbage before it touches your device.
 
 ## Browser Hardening
 
@@ -100,15 +100,15 @@ Configure Firefox with [recommended privacy settings](https://www.privacytools.i
 - Delete cookies on close (if you can tolerate re-logging into sites)
 - Disable telemetry
 
-[Tor Browser](https://www.torproject.org/) — For when you need actual anonymity, not just privacy. Significantly slower but routes traffic through multiple encrypted relays. Use it for specific tasks, not daily browsing.
+[Tor Browser](https://www.torproject.org/): For when you need actual anonymity, not just privacy. Significantly slower but routes traffic through multiple encrypted relays. Use it for specific tasks, not daily browsing.
 
 **Extensions:**
 
-[uBlock Origin](https://ublockorigin.com/) — The gold standard for ad and tracker blocking. Open source, lightweight, highly configurable. [Scored 100/100](https://cyberinsider.com/best-ad-blocker/) in recent blocking tests. Note: Google's Manifest V3 changes have degraded extension capabilities in Chrome-based browsers. Firefox still supports the full-featured version.
+[uBlock Origin](https://ublockorigin.com/): The best ad and tracker blocker available. Open source, lightweight, highly configurable. [Scored 100/100](https://cyberinsider.com/best-ad-blocker/) in recent blocking tests. Note: Google's Manifest V3 changes have degraded extension capabilities in Chrome-based browsers. Firefox still supports the full-featured version.
 
-[Privacy Badger](https://privacybadger.org/) — Made by the Electronic Frontier Foundation. Learns to block trackers based on behavior rather than static lists. Good complement to uBlock Origin.
+[Privacy Badger](https://privacybadger.org/): Made by the Electronic Frontier Foundation. Learns to block trackers based on behavior rather than static lists. Good complement to uBlock Origin.
 
-[LocalCDN](https://www.localcdn.org/) or [Decentraleyes](https://decentraleyes.org/) — Prevents tracking through content delivery networks by serving common libraries locally.
+[LocalCDN](https://www.localcdn.org/) or [Decentraleyes](https://decentraleyes.org/): Prevents tracking through content delivery networks by serving common libraries locally.
 
 **Keep extensions minimal.** Every extension you add makes your browser fingerprint more unique. Install what you need, nothing more.
 
@@ -118,17 +118,17 @@ If you're reusing passwords or storing them in your browser, stop. A password ma
 
 **Free:**
 
-[Bitwarden](https://bitwarden.com/) — Open source, cross-platform, genuinely useful free tier. Premium is $10/year if you want extras like built-in 2FA codes and encrypted file storage.
+[Bitwarden](https://bitwarden.com/): Open source, cross-platform, genuinely useful free tier. Premium is $10/year if you want extras like built-in 2FA codes and encrypted file storage.
 
-[KeePassXC](https://keepassxc.org/) — Fully offline, open source. No cloud, no account, no sync. You manage the database file yourself. Maximum control, but more manual.
+[KeePassXC](https://keepassxc.org/): Fully offline, open source. No cloud, no account, no sync. You manage the database file yourself. Maximum control, but more manual.
 
 **Paid:**
 
-[1Password](https://1password.com/) — $36/year for individuals, $60/year for families. Polished interface, excellent browser integration, strong security model. If you'll actually use a password manager because it's pleasant to use, 1Password is worth the money.
+[1Password](https://1password.com/): $36/year for individuals, $60/year for families. Polished interface, excellent browser integration, strong security model. If you'll actually use a password manager because it's pleasant to use, 1Password is worth the money.
 
-[Proton Pass](https://proton.me/pass) — Included with Proton subscriptions. Integrates well with their ecosystem. Built-in email alias generation.
+[Proton Pass](https://proton.me/pass): Included with Proton subscriptions. Integrates well with their ecosystem. Built-in email alias generation.
 
-**The point isn't which manager you choose—it's that you use one.** Generate unique, random passwords for every account. Let the manager remember them. Your brain is not a secure storage medium.
+**The point isn't which manager you choose. It's that you use one.** Generate unique, random passwords for every account. Let the manager remember them. Your brain is not a secure storage medium.
 
 ## Two-Factor Authentication
 
@@ -136,15 +136,15 @@ SMS-based 2FA is better than nothing, but [SIM-swapping attacks are real](https:
 
 **Free:**
 
-[Aegis Authenticator](https://getaegis.app/) (Android) — Open source, encrypted backups, better than Google Authenticator in every way.
+[Aegis Authenticator](https://getaegis.app/) (Android): Open source, encrypted backups, better than Google Authenticator in every way.
 
-[2FAS](https://2fas.com/) (iOS/Android) — Open source, clean interface, cloud backup option.
+[2FAS](https://2fas.com/) (iOS/Android): Open source, clean interface, cloud backup option.
 
 **Paid/Integrated:**
 
-[1Password](https://1password.com/) — Can store TOTP codes alongside passwords. Convenient, though security purists argue you shouldn't keep eggs in one basket.
+[1Password](https://1password.com/): Can store TOTP codes alongside passwords. Convenient, though security purists argue you shouldn't keep eggs in one basket.
 
-[Proton Pass](https://proton.me/pass) — Same deal. Integrated 2FA with your Proton account.
+[Proton Pass](https://proton.me/pass): Same deal. Integrated 2FA with your Proton account.
 
 **Enable 2FA on everything important:** email, banking, social media, cloud storage. Prioritize authenticator apps over SMS.
 
@@ -152,7 +152,7 @@ SMS-based 2FA is better than nothing, but [SIM-swapping attacks are real](https:
 
 Standard SMS is unencrypted and trivially intercepted. For sensitive conversations:
 
-[Signal](https://signal.org/) — End-to-end encrypted messaging. Free, open source, minimal metadata collection. [Proven in court](https://signal.org/bigbrother/) that they have almost nothing to provide when subpoenaed (just phone number, account creation date, and last connection time).
+[Signal](https://signal.org/): End-to-end encrypted messaging. Free, open source, minimal metadata collection. [Proven in court](https://signal.org/bigbrother/) that they have almost nothing to provide when subpoenaed (just phone number, account creation date, and last connection time).
 
 This isn't about having something to hide. It's about having conversations that aren't stored in plaintext on carrier servers indefinitely.
 
@@ -162,17 +162,17 @@ You can request removal from data brokers, though it's tedious.
 
 **DIY:**
 
-[Have I Been Pwned](https://haveibeenpwned.com/) — Check which breaches contain your email. Also offers notification when your email appears in new breaches.
+[Have I Been Pwned](https://haveibeenpwned.com/): Check which breaches contain your email. Also offers notification when your email appears in new breaches.
 
-[Privacy Rights Clearinghouse](https://privacyrights.org/data-brokers) — Maintains a list of data brokers with opt-out procedures. Manual but free.
+[Privacy Rights Clearinghouse](https://privacyrights.org/data-brokers): Maintains a list of data brokers with opt-out procedures. Manual but free.
 
 **California residents:** The [Delete Act portal](https://iapp.org/news/a/new-year-new-rules-us-state-privacy-requirements-coming-online-as-2026-begins) (launching 2026) lets you submit one request to all registered brokers.
 
 **Paid services:**
 
-[DeleteMe](https://joindeleteme.com/) — ~$129/year. They handle opt-out requests on your behalf and provide regular reports.
+[DeleteMe](https://joindeleteme.com/): ~$129/year. They handle opt-out requests on your behalf and provide regular reports.
 
-[Privacy Duck](https://www.privacyduck.com/) — Similar service, slightly different broker coverage.
+[Privacy Duck](https://www.privacyduck.com/): Similar service, slightly different broker coverage.
 
 These services don't eliminate your data from existence, but they significantly reduce your exposure in people-search sites and marketing databases.
 
@@ -230,10 +230,10 @@ Progress, not perfection.
 | **DNS Blocking** | [NextDNS](https://nextdns.io/), [AdGuard DNS](https://adguard-dns.io/) | NextDNS Pro ($20/yr) |
 | **Password Manager** | [Bitwarden](https://bitwarden.com/), [KeePassXC](https://keepassxc.org/) | [1Password](https://1password.com/) ($36/yr) |
 | **2FA** | [Aegis](https://getaegis.app/), [2FAS](https://2fas.com/) | Built into 1Password/Proton Pass |
-| **Browser** | [Firefox](https://www.mozilla.org/) | — |
-| **Extensions** | [uBlock Origin](https://ublockorigin.com/), [Privacy Badger](https://privacybadger.org/) | — |
-| **Messaging** | [Signal](https://signal.org/) | — |
-| **Breach Check** | [Have I Been Pwned](https://haveibeenpwned.com/) | — |
+| **Browser** | [Firefox](https://www.mozilla.org/) | None |
+| **Extensions** | [uBlock Origin](https://ublockorigin.com/), [Privacy Badger](https://privacybadger.org/) | None |
+| **Messaging** | [Signal](https://signal.org/) | None |
+| **Breach Check** | [Have I Been Pwned](https://haveibeenpwned.com/) | None |
 | **Data Removal** | DIY via [Privacy Rights](https://privacyrights.org/data-brokers) | [DeleteMe](https://joindeleteme.com/) ($129/yr) |
 
 ---

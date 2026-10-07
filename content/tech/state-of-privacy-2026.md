@@ -12,7 +12,7 @@ January 21, 2026 · 8 min read
 
 #Privacy #Cybersecurity #DataBrokers
 
-*Part 1 of 2 — [Part 2: Tools That Actually Work](/tech/practical-privacy-tools-2026/)*
+*Part 1 of 2: [Part 2: Tools That Actually Work](/tech/practical-privacy-tools-2026/)*
 
 I've been in cybersecurity for over two decades. I've watched the industry evolve from "don't click suspicious links" to a $300 billion surveillance economy that most people don't even know exists.
 
@@ -22,7 +22,7 @@ This isn't about paranoia. It's about understanding what's actually happening wi
 
 There's an entire industry built around buying, selling, and trading your personal information. They're called data brokers, and according to [Grand View Research](https://www.grandviewresearch.com/industry-analysis/data-broker-market-report), the market hit $278 billion in 2024 and is projected to reach $512 billion by 2033.
 
-Let that sink in. Half a trillion dollars—built on your data.
+Half a trillion dollars. Built on your data.
 
 Companies like Acxiom, Experian, Oracle, and thousands of smaller players collect information from every digital touchpoint in your life. They aggregate it, analyze it, and sell it to anyone willing to pay. Oracle alone claims to have data on over [two billion people globally](https://policyreview.info/articles/analysis/untamed-and-discreet-role-data-brokers-surveillance-capitalism-transnational-and), with the ability to infer more than 30,000 attributes about each person.
 
@@ -38,7 +38,7 @@ Where does your data come from? Everywhere:
 
 The result? Detailed dossiers on hundreds of millions of Americans, sold to marketers, insurance companies, employers, landlords, law enforcement, and anyone else with a credit card.
 
-And here's the uncomfortable part: it's almost entirely legal.
+The uncomfortable part is that it's almost entirely legal.
 
 ## The Legal Vacuum
 
@@ -46,17 +46,17 @@ The United States has no comprehensive federal privacy law.
 
 Let me say that again: in 2026, the world's largest tech economy has no baseline federal protection for your personal data.
 
-The [American Data Privacy and Protection Act (ADPPA)](https://en.wikipedia.org/wiki/American_Data_Privacy_and_Protection_Act) came closest in 2022—it passed committee with a 53-2 vote, the first federal privacy bill ever to do so. Then it died. The [American Privacy Rights Act (APRA)](https://www.techtarget.com/searchsecurity/tip/State-of-data-privacy-laws) followed in 2024. Same result.
+The [American Data Privacy and Protection Act (ADPPA)](https://en.wikipedia.org/wiki/American_Data_Privacy_and_Protection_Act) came closest in 2022. It passed committee with a 53-2 vote, the first federal privacy bill ever to do so. Then it died. The [American Privacy Rights Act (APRA)](https://www.techtarget.com/searchsecurity/tip/State-of-data-privacy-laws) followed in 2024. Same result.
 
 Why? Politics. Disagreements over whether federal law should override stronger state laws. Disputes about whether individuals should be able to sue companies directly. Lobbying from industries that profit from the status quo.
 
-The result is a patchwork. As of January 2026, [19 states have comprehensive privacy laws](https://insights.manageengine.com/privacy-compliance/us-state-data-privacy-laws/)—California, Colorado, Connecticut, Delaware, Indiana, Iowa, Kentucky, Maryland, Minnesota, Montana, Nebraska, New Hampshire, New Jersey, Oregon, Rhode Island, Tennessee, Texas, Utah, and Virginia.
+The result is a patchwork. As of January 2026, [19 states have comprehensive privacy laws](https://insights.manageengine.com/privacy-compliance/us-state-data-privacy-laws/): California, Colorado, Connecticut, Delaware, Indiana, Iowa, Kentucky, Maryland, Minnesota, Montana, Nebraska, New Hampshire, New Jersey, Oregon, Rhode Island, Tennessee, Texas, Utah, and Virginia.
 
 Each law is slightly different. Each has different definitions, different exemptions, different enforcement mechanisms. If you're a business, compliance is a nightmare. If you're a consumer, protection depends entirely on where you live.
 
-Here's what's happening right now:
+Where things stand right now:
 
-**California's Delete Act** launched in January 2026, creating a [one-stop deletion portal](https://iapp.org/news/a/new-year-new-rules-us-state-privacy-requirements-coming-online-as-2026-begins) where residents can request removal from all registered data brokers at once. It's a good idea—and it only applies to Californians.
+**California's Delete Act** launched in January 2026, creating a [one-stop deletion portal](https://iapp.org/news/a/new-year-new-rules-us-state-privacy-requirements-coming-online-as-2026-begins) where residents can request removal from all registered data brokers at once. It's a good idea, and it only applies to Californians.
 
 **Montana closed the law enforcement loophole** in 2025, becoming the first state to [prevent police from buying citizens' data](https://insights.manageengine.com/privacy-compliance/us-state-data-privacy-laws/) from brokers when they'd normally need a warrant. In every other state? Law enforcement can simply purchase what they can't legally collect.
 
@@ -64,7 +64,7 @@ Here's what's happening right now:
 
 **Children's data** is getting more attention, with several states now requiring opt-in consent for collecting teen data or banning targeted advertising to minors entirely.
 
-But here's the fundamental problem: these laws focus on giving you the right to *opt out*. They don't stop the collection in the first place. The default is surveillance. Privacy requires effort.
+The problem is that these laws focus on giving you the right to *opt out*. They don't stop the collection in the first place. The default is surveillance. Privacy requires effort.
 
 ## Your Email Is Your Identity
 
@@ -74,7 +74,7 @@ Your email address is your primary online identity. Not your IP. Not your browse
 
 When you use the same Gmail address for your bank, social media, shopping, newsletters, and random website signups, you've created a single thread that ties your entire digital life together. Data brokers don't need sophisticated tracking. They just need your email, and they can cross-reference everything.
 
-That email shows up in breach databases. It gets sold and resold. It connects your purchase history to your location data to your browsing behavior to your social media activity. That's how "personalized" ads feel like surveillance—because they are.
+That email shows up in breach databases. It gets sold and resold. It connects your purchase history to your location data to your browsing behavior to your social media activity. That's how "personalized" ads feel like surveillance. Because they are.
 
 Check [Have I Been Pwned](https://haveibeenpwned.com/) right now. Enter your primary email. Count the breaches. Now understand that each of those breaches fed information into an ecosystem designed to build a profile of you.
 
@@ -82,12 +82,12 @@ Check [Have I Been Pwned](https://haveibeenpwned.com/) right now. Enter your pri
 
 VPNs have been marketed as privacy silver bullets. They're not.
 
-Here's what a VPN actually does:
+What a VPN actually does:
 - Encrypts traffic between your device and the VPN server
 - Masks your IP from websites you visit
 - Protects you on public Wi-Fi
 
-Here's what a VPN does NOT do:
+What a VPN does NOT do:
 - Make you anonymous
 - Stop tracking when you're logged into Google, Facebook, or any service
 - Prevent data brokers from collecting your information
@@ -119,7 +119,7 @@ What they *can* be compelled to provide:
 - Account creation dates
 - Email metadata (sender, recipient, subject lines, timestamps)
 
-This isn't a criticism of Proton—they're more transparent than almost any provider, and their encryption is real. But "encrypted" and "anonymous" are different things. If you're a regular person trying to escape advertising surveillance, Proton is a massive upgrade from Gmail. If you're an activist with government-level adversaries, you need to understand these limits.
+This isn't a criticism of Proton. They're more transparent than almost any provider, and their encryption is real. But "encrypted" and "anonymous" are different things. If you're a regular person trying to escape advertising surveillance, Proton is a massive upgrade from Gmail. If you're an activist with government-level adversaries, you need to understand these limits.
 
 ## Why It Matters
 
@@ -135,19 +135,19 @@ That's not the point. Privacy isn't about hiding wrongdoing. It's about:
 
 **Future uncertainty.** Data collected today can be used in ways you can't predict. What's harmless now might not be harmless under different circumstances, different laws, or different leadership.
 
-The $300 billion data broker industry exists because your information has value. Every piece of data you give away—or that gets collected without your knowledge—feeds a system designed to predict and influence your behavior.
+The $300 billion data broker industry exists because your information has value. Every piece of data you give away, or that gets collected without your knowledge, feeds a system designed to predict and influence your behavior.
 
 You can't opt out of the digital world. But you can be intentional about what you share and with whom.
 
 ## What Now?
 
-The legal landscape isn't going to save you anytime soon. Federal privacy legislation remains gridlocked. State laws help if you're lucky enough to live in the right state, but even then, they're reactive—requiring you to actively opt out rather than protecting you by default.
+The legal landscape isn't going to save you anytime soon. Federal privacy legislation remains gridlocked. State laws help if you're lucky enough to live in the right state, but even then, they're reactive, requiring you to actively opt out rather than protecting you by default.
 
 The practical reality is this: if you want privacy in 2026, you have to build it yourself.
 
 That means making different choices about the tools you use, the services you trust, and the defaults you accept. It requires discipline, precision, and execution.
 
-In Part 2, I'll cover the specific tools and tactics that actually work—email aliases, DNS-level blocking, browser hardening, password management, and more. Not paranoid overkill, but practical steps that meaningfully reduce your exposure without requiring a computer science degree.
+In Part 2, I'll cover the specific tools and tactics that actually work: email aliases, DNS-level blocking, browser hardening, password management, and more. Not paranoid overkill, but practical steps that meaningfully reduce your exposure without requiring a computer science degree.
 
 Your privacy is worth the effort.
 

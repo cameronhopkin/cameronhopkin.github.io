@@ -8,7 +8,7 @@ description: ""
 
 # Day 002: The Type System
 
-Today I opened K&R section 1.2 — Variables and Arithmetic Expressions.
+Today I opened K&R section 1.2: Variables and Arithmetic Expressions.
 A Fahrenheit-to-Celsius conversion table. Fourteen lines of code. It
 broke my assumptions about how computers do math.
 
@@ -46,7 +46,7 @@ eight depending on the platform. `float` is four bytes. `double` is eight.
 The important part: C does not guarantee sizes. `int` is defined as "at
 least 16 bits." On my machine it is 32 bits. On the PDP-11 where C was
 born it was 16. The language was designed to run on any hardware. If you
-need exact sizes — and in security work you almost always do — you use
+need exact sizes (and in security work you almost always do), you use
 types like `int32_t` and `uint8_t` from `stdint.h`.
 
 Rust learned from this. Every integer type has its size in the name:
@@ -54,8 +54,8 @@ Rust learned from this. Every integer type has its size in the name:
 hid the machine entirely. Python integers grow as large as your memory
 allows. No overflow. No awareness of what is happening underneath.
 
-Both are valid choices. But if you want to understand the machine — and
-especially if you want to understand why software breaks — you need to
+Both are valid choices. But if you want to understand the machine, and
+especially if you want to understand why software breaks, you need to
 know what C is doing.
 
 ### Why did my compiler reject code without `int main`?
@@ -76,12 +76,12 @@ happen in real time. That is not an obstacle. That is the education.
 ### Where does printf come from?
 
 `printf` is not part of the C language. It is part of the C Standard
-Library — libc — included through the `stdio.h` header.
+Library (libc), included through the `stdio.h` header.
 
 Here is the actual chain of events when I call `printf("hello")`:
 
 My program calls `printf`. The `printf` function in libc does all the
-formatting work — handling `%d`, `%f`, padding, precision — in user space.
+formatting work (handling `%d`, `%f`, padding, precision) in user space.
 Then it calls `write()`, which is a system call. The kernel receives that
 call and sends the bytes to my terminal.
 
@@ -110,7 +110,7 @@ to printf without sanitization. I will study that in detail later.
 
 ### Why are variables declared at the top?
 
-In C89 — the standard K&R second edition targets — declaring all variables
+In C89, the standard K&R second edition targets, declaring all variables
 at the beginning of a block was a rule, not a suggestion. The compiler
 needed to know all variable sizes up front to set up the stack frame.
 
@@ -121,7 +121,7 @@ conventions, so everything is at the top.
 Variables declared inside a function are local to that function. They live
 on the stack. When the function returns, that memory is reclaimed. If you
 return a pointer to a local variable, that pointer now points at memory
-that no longer belongs to you. That is a dangling pointer — one of the
+that no longer belongs to you. That is a dangling pointer, one of the
 most dangerous bugs in C. We will get there.
 
 ## The Feynman Test
@@ -136,8 +136,8 @@ does exactly what you tell it. Nothing more.
 
 Why should a security engineer care? Because integer truncation and
 overflow are real vulnerability classes. A calculation that looks correct
-in your head can produce zero — or worse, a negative number that wraps
-around to a massive positive — when the machine does integer math. Bounds
+in your head can produce zero, or worse, a negative number that wraps
+around to a massive positive, when the machine does integer math. Bounds
 checks fail. Buffer sizes go wrong. Exploits follow.
 
 Understanding the type system is not academic. It is the first layer of
@@ -145,7 +145,7 @@ understanding how software breaks.
 
 ## What Is Next
 
-Sections 1.3 and 1.4 — the `for` loop and symbolic constants. The
+Sections 1.3 and 1.4: the `for` loop and symbolic constants. The
 temperature table rewritten three ways, each one teaching something new
 about how C thinks.
 

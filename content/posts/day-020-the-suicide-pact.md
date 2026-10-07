@@ -34,7 +34,7 @@ Looks like it might be. Two post-increments, an assignment, all inside a single 
 
 Result: not UB. `i` is read to compute the destination index, and the increment is a side effect of that sub-expression, sequenced after the value computation. Same for `j`. The two objects are distinct. No single object is both modified and read in an unsequenced way. The code is well-defined.
 
-The trap was surface pattern matching. Two `++` operators, assignment inside a condition — looks dangerous. The mechanics say otherwise.
+The trap was surface pattern matching. Two `++` operators, assignment inside a condition. Looks dangerous. The mechanics say otherwise.
 
 ### Is the `-1` in `any()` the same as EOF?
 
@@ -48,23 +48,23 @@ That is `strcat`. The function knows where `s` starts, finds where it ends by wa
 
 The reason this matters for security: those 10 extra bytes are attacker-controlled. If an attacker can feed a long enough string into a `strcat` call, they control what gets written past the buffer boundary. Control what gets written to a return address and you control where the program goes next. That is a buffer overflow. That is how the Morris Worm worked in 1988. That is how buffer overflows still work today.
 
-The fix is not hard: `strncat` takes a third argument — the maximum number of characters to append. The information the caller has always had gets passed to the function. The function stops when it hits the limit. The design hole closes. The original function cannot be unfixed; it is in the standard. Every new C program written with `strcat` today is making the same bet the original programmers made: that the caller got the math right.
+The fix is not hard: `strncat` takes a third argument: the maximum number of characters to append. The information the caller has always had gets passed to the function. The function stops when it hits the limit. The design hole closes. The original function cannot be unfixed; it is in the standard. Every new C program written with `strcat` today is making the same bet the original programmers made: that the caller got the math right.
 
 ## Hacker Connection
 
 The `strcat` design flaw is CWE-120: Classic Buffer Overflow, also called the "buffer copy without checking size of input." It is one of the oldest and most documented vulnerability classes in software security.
 
-The Morris Worm of 1988 used a `gets` call — the same design philosophy, no bounds check, trust the input to terminate — to achieve remote code execution on VAX and Sun machines running BSD Unix. That was 38 years ago. The C standard library still ships `strcat` and `gets` (deprecated in C11, removed in C17, but the damage was done).
+The Morris Worm of 1988 used a `gets` call (the same design philosophy, no bounds check, trust the input to terminate) to achieve remote code execution on VAX and Sun machines running BSD Unix. That was 38 years ago. The C standard library still ships `strcat` and `gets` (deprecated in C11, removed in C17, but the damage was done).
 
-The notebook now has 13 entries. The thread connecting them is becoming visible: Entry 1 (sentinel collision), Entry 9 (signed char index), Entry 12 (sentinel-to-offset promotion), and Entry 13 (unbounded sentinel trust) are all variations of the same root cause — a single return channel or a single value carrying two types of meaning, with no mechanism to tell them apart. The machine cannot tell. The programmer has to. When the programmer gets it wrong, the machine keeps going.
+The notebook now has 13 entries. The thread connecting them is becoming visible: Entry 1 (sentinel collision), Entry 9 (signed char index), Entry 12 (sentinel-to-offset promotion), and Entry 13 (unbounded sentinel trust) are all variations of the same root cause: a single return channel or a single value carrying two types of meaning, with no mechanism to tell them apart. The machine cannot tell. The programmer has to. When the programmer gets it wrong, the machine keeps going.
 
 ## What Is Next
 
-Section 2.9: bitwise operators (a brief revisit before the chapter closes out). Then 2.10 and 2.11 — assignment operators and expressions, the conditional expression. Chapter 2 is close to done.
+Section 2.9: bitwise operators (a brief revisit before the chapter closes out). Then 2.10 and 2.11: assignment operators and expressions, the conditional expression. Chapter 2 is close to done.
 
 Overnight question: K&R uses the conditional expression `(n > 0) ? f : -f` as an example. What is the difference between writing that as a conditional expression versus writing it as an if-else? Is there a case where the compiler generates different code for each? Is there a security case where the two behave differently?
 
-Hacker track next: the notebook has 13 entries and the patterns are starting to reference each other. Before Chapter 3, a review pass — map the entries that share a root cause. The thread is there. Name it explicitly before Chapter 3 introduces new ones.
+Hacker track next: the notebook has 13 entries and the patterns are starting to reference each other. Before Chapter 3, a review pass. Map the entries that share a root cause. The thread is there. Name it explicitly before Chapter 3 introduces new ones.
 
 ---
 
