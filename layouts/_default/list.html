@@ -1,24 +1,21 @@
 {{ define "main" }}
-<div class="list-page">
-    <h1>{{ .Title }}</h1>
+<div class="list-page s-{{ .Section }}">
+    <header class="list-header">
+        <h1>{{ .Title }}</h1>
+        {{ with .Description }}<p class="list-description">{{ . }}</p>{{ end }}
+    </header>
 
     {{ with .Content }}
     <div class="section-intro">{{ . }}</div>
     {{ end }}
 
-    {{ range .Pages }}
-    <article class="post-preview">
-        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-        <div class="post-meta">
-            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
-            {{ if $.Site.Params.showReadingTime }}
-            <span class="reading-time">· {{ math.Round (div (countwords .Content) 200.0) }} min</span>
-            {{ end }}
-        </div>
-        {{ if .Description }}
-        <p class="post-excerpt">{{ .Description }}</p>
+    {{ range .Pages.ByDate.Reverse.GroupByDate "2006" }}
+    <section class="year-group">
+        <h2 class="year">{{ .Key }}</h2>
+        {{ range .Pages }}
+            {{ partial "post-row.html" (dict "page" . "badge" (not $.IsSection)) }}
         {{ end }}
-    </article>
+    </section>
     {{ end }}
 </div>
 {{ end }}

@@ -1,128 +1,51 @@
 {{ define "main" }}
+{{ $all := (where site.RegularPages "Section" "ne" "").ByDate.Reverse }}
 <div class="home">
     <section class="intro">
+        <p class="prompt"><span class="prompt-user">cam@tyrminal</span>:<span class="prompt-path">~</span>$ whoami</p>
         <h1>Hey, I'm Cam.</h1>
-        <p>{{ .Site.Params.description }}</p>
-        {{ if .Site.Params.aiDisclosure }}
+        <p class="intro-lede">{{ site.Params.description }}</p>
+        {{ if site.Params.aiDisclosure }}
         <p class="hero-ai-disclosure">
-            <a href="{{ .Site.Params.aiDisclosureURL | relURL }}">{{ .Site.Params.aiDisclosureShort }}</a>
+            <a href="{{ site.Params.aiDisclosureURL | relURL }}">{{ site.Params.aiDisclosureShort }}</a>
         </p>
         {{ end }}
     </section>
 
-    {{/* Faith */}}
-    {{ $faith := where .Site.RegularPages "Section" "faith" }}
-    {{ if $faith }}
-    <section class="home-section home-section--faith">
-        <div class="section-header">
-            <h2>Faith</h2>
-            <a href="/faith/" class="view-all">View all &rarr;</a>
+    {{ with index $all 0 }}
+    <section class="featured s-{{ .Section }}" aria-label="Latest post">
+        <div class="featured-label">Latest</div>
+        <div class="post-row-top">
+            {{ partial "section-badge.html" . }}
+            {{ partial "post-meta.html" . }}
         </div>
-        {{ range first 2 (sort $faith "Date" "desc") }}
-        <article class="post-preview">
-            <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-            <div class="post-meta">
-                <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
-                {{ if $.Site.Params.showReadingTime }}
-                <span class="reading-time">&middot; {{ math.Round (div (countwords .Content) 200.0) }} min</span>
-                {{ end }}
-            </div>
-            {{ if .Description }}<p class="post-excerpt">{{ .Description }}</p>{{ end }}
-        </article>
-        {{ end }}
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        <p class="post-excerpt">{{ partial "excerpt.html" . }}</p>
+        <a href="{{ .RelPermalink }}" class="read-more">Read it &rarr;</a>
     </section>
     {{ end }}
 
-    {{/* Fitness */}}
-    {{ $fitness := where .Site.RegularPages "Section" "fitness" }}
-    {{ if $fitness }}
-    <section class="home-section home-section--fitness">
-        <div class="section-header">
-            <h2>Fitness</h2>
-            <a href="/fitness/" class="view-all">View all &rarr;</a>
-        </div>
-        {{ range first 2 (sort $fitness "Date" "desc") }}
-        <article class="post-preview">
-            <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-            <div class="post-meta">
-                <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
-                {{ if $.Site.Params.showReadingTime }}
-                <span class="reading-time">&middot; {{ math.Round (div (countwords .Content) 200.0) }} min</span>
-                {{ end }}
-            </div>
-            {{ if .Description }}<p class="post-excerpt">{{ .Description }}</p>{{ end }}
-        </article>
+    <section class="home-block">
+        <h2 class="block-title">Recent</h2>
+        {{ range after 1 (first 7 $all) }}
+            {{ partial "post-row.html" (dict "page" . "badge" true) }}
         {{ end }}
     </section>
-    {{ end }}
 
-    {{/* Posts */}}
-    {{ $posts := where .Site.RegularPages "Section" "posts" }}
-    {{ if $posts }}
-    <section class="home-section home-section--posts">
-        <div class="section-header">
-            <h2>Posts</h2>
-            <a href="/posts/" class="view-all">View all &rarr;</a>
+    <section class="home-block">
+        <h2 class="block-title">Sections</h2>
+        <div class="section-grid">
+            {{ range site.Sections.ByDate.Reverse }}
+            {{ $pages := .RegularPages.ByDate.Reverse }}
+            {{ if $pages }}
+            <a href="{{ .RelPermalink }}" class="section-card s-{{ .Section }}">
+                <span class="section-card-title">{{ .Title }}</span>
+                <span class="section-card-count">{{ len $pages }} {{ cond (eq (len $pages) 1) "post" "posts" }}</span>
+                {{ with index $pages 0 }}<span class="section-card-latest">{{ .Title }}</span>{{ end }}
+            </a>
+            {{ end }}
+            {{ end }}
         </div>
-        {{ range first 3 (sort $posts "Date" "desc") }}
-        <article class="post-preview">
-            <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-            <div class="post-meta">
-                <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
-                {{ if $.Site.Params.showReadingTime }}
-                <span class="reading-time">&middot; {{ math.Round (div (countwords .Content) 200.0) }} min</span>
-                {{ end }}
-            </div>
-            {{ if .Description }}<p class="post-excerpt">{{ .Description }}</p>{{ end }}
-        </article>
-        {{ end }}
     </section>
-    {{ end }}
-
-    {{/* Tech */}}
-    {{ $tech := where .Site.RegularPages "Section" "tech" }}
-    {{ if $tech }}
-    <section class="home-section home-section--tech">
-        <div class="section-header">
-            <h2>Tech</h2>
-            <a href="/tech/" class="view-all">View all &rarr;</a>
-        </div>
-        {{ range first 2 (sort $tech "Date" "desc") }}
-        <article class="post-preview">
-            <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-            <div class="post-meta">
-                <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
-                {{ if $.Site.Params.showReadingTime }}
-                <span class="reading-time">&middot; {{ math.Round (div (countwords .Content) 200.0) }} min</span>
-                {{ end }}
-            </div>
-            {{ if .Description }}<p class="post-excerpt">{{ .Description }}</p>{{ end }}
-        </article>
-        {{ end }}
-    </section>
-    {{ end }}
-
-    {{/* Forge Log */}}
-    {{ $forgeLog := where .Site.RegularPages "Section" "forge-log" }}
-    {{ if $forgeLog }}
-    <section class="home-section home-section--forge-log">
-        <div class="section-header">
-            <h2>Forge Log</h2>
-            <a href="/forge-log/" class="view-all">View all &rarr;</a>
-        </div>
-        {{ range first 2 (sort $forgeLog "Date" "desc") }}
-        <article class="post-preview">
-            <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-            <div class="post-meta">
-                <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
-                {{ if $.Site.Params.showReadingTime }}
-                <span class="reading-time">&middot; {{ math.Round (div (countwords .Content) 200.0) }} min</span>
-                {{ end }}
-            </div>
-            {{ if .Description }}<p class="post-excerpt">{{ .Description }}</p>{{ end }}
-        </article>
-        {{ end }}
-    </section>
-    {{ end }}
 </div>
 {{ end }}

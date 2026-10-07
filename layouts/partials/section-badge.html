@@ -1,0 +1,4 @@
+{{- /* Colored section label. Pass a page. */ -}}
+{{- with .CurrentSection -}}
+<a href="{{ .RelPermalink }}" class="badge s-{{ $.Section }}">{{ .Title }}</a>
+{{- end -}}

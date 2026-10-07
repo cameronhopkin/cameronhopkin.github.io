@@ -1,0 +1,11 @@
+{{- /* One line in a feed. Pass dict "page" and "badge" (bool). */ -}}
+{{ with .page }}
+<article class="post-row s-{{ .Section }}">
+    <div class="post-row-top">
+        {{ if $.badge }}{{ partial "section-badge.html" . }}{{ end }}
+        {{ partial "post-meta.html" . }}
+    </div>
+    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    <p class="post-excerpt">{{ partial "excerpt.html" . }}</p>
+</article>
+{{ end }}

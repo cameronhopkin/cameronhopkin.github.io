@@ -1,0 +1,6 @@
+{{- /* Description if set, otherwise a plain-text summary. Pass a page. */ -}}
+{{- with .Description -}}
+{{ . }}
+{{- else -}}
+{{ .Summary | plainify | htmlUnescape | truncate 160 }}
+{{- end -}}
