@@ -144,7 +144,7 @@ I'm actually here now. Not just in the house. Here. Present. Engaged. Fighting f
 
 My family picks a theme and scripture for each year. In 2025, we held onto two:
 
-**Hebrews 12:11**: *"No discipline is enjoyable while it is happening; it's painful! But afterward there will be a peaceful harvest of right living for those who are trained in this way."* (NLT)
+**Hebrews 12:11**: *"No discipline is enjoyable while it is happening—it's painful! But afterward there will be a peaceful harvest of right living for those who are trained in this way."* (NLT)
 
 **Galatians 6:9**: *"So let's not get tired of doing what is good. At just the right time we will reap a harvest of blessing if we don't give up."* (NLT)
 
@@ -193,6 +193,6 @@ That's DPE. That's how I'm living now.
 ---
 
 *"So I run with purpose in every step. I am not just shadowboxing."*
-1 Corinthians 9:26 (NLT)
+— 1 Corinthians 9:26 (NLT)
 
 **DPE**
