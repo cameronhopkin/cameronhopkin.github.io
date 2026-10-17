@@ -24,6 +24,9 @@ hugo new tech/my-post.md
 
 # Fitness
 hugo new fitness/my-post.md
+
+# Python Journey
+hugo new python/day-002-my-post.md
 ```
 
 Set `draft: false` when ready to publish.

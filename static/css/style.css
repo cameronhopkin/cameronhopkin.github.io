@@ -8,6 +8,7 @@
     --accent-orange: #d29922;
     --accent-purple: #a371f7;
     --accent-red: #f47067;
+    --accent-teal: #39c5cf;
     --border: #30363d;
     --max-width: 720px;
     --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
@@ -105,6 +106,7 @@ body {
 .s-faith { --s: var(--accent-green); }
 .s-fitness { --s: var(--accent-orange); }
 .s-posts { --s: var(--accent); }
+.s-python { --s: var(--accent-teal); }
 .s-tech { --s: var(--accent-purple); }
 .s-forge-log { --s: var(--accent-red); }
 

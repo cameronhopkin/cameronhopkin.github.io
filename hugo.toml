@@ -33,21 +33,25 @@ buildFuture = true
     url = "/posts/"
     weight = 2
   [[menu.main]]
+    name = "Python Journey"
+    url = "/python/"
+    weight = 3
+  [[menu.main]]
     name = "Faith"
     url = "/faith/"
-    weight = 3
+    weight = 4
   [[menu.main]]
     name = "Fitness"
     url = "/fitness/"
-    weight = 4
+    weight = 5
   [[menu.main]]
     name = "Tech"
     url = "/tech/"
-    weight = 5
+    weight = 6
   [[menu.main]]
     name = "Forge Log"
     url = "/forge-log/"
-    weight = 6
+    weight = 7
 
 [markup]
   [markup.highlight]
