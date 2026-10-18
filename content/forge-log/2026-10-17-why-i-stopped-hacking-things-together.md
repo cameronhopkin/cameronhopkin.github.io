@@ -1,13 +1,13 @@
 ---
 title: "Why I Stopped Learning by Hacking Things Together"
-date: 2026-10-17T20:00:00-04:00
-draft: true
+date: 2026-10-18T18:05:00-04:00
+draft: false
 series: ["Forge Log"]
 tags: ["forge-log", "python", "learning", "ai", "agents", "faith"]
 description: "I sat a Python baseline with no code and no AI, missed two classic traps, and built a coach instead of reaching for another shortcut."
 ---
 
-Today I sat down with three Python problems, a chat window, and one rule. No running code. No AI help. I wanted to see what was actually in my head before I built anything to coach me.
+Yesterday I sat down with three Python problems, a chat window, and one rule. No running code. No AI help. I wanted to see what was actually in my head before I built anything to coach me.
 
 ## The Baseline
 
@@ -76,7 +76,7 @@ That assessment is my real record, not a generic beginner profile: what I am str
 
 Lessons 0 through 5 are done and in a git repo. I skipped the book's Jupyter start and set up Homebrew Python 3.14, a virtual environment, git, and nvim instead. I got `//` slightly wrong, misnamed a `.gitignore`, and ran a small prompt injection test with the word PINEAPPLE. That is all in [Day 001](/python/day-001-predict-then-run/), the first post in a new section on this site: the Python Journey.
 
-Tracking starts Monday, October 19. Lesson 6 is Wednesday. On Saturday, October 24, I explain f-strings from memory with no notes. That is the first real test of whether any of this stuck.
+Tracking starts tomorrow, Monday, October 19. Lesson 6 is Wednesday. On Saturday, October 24, I explain f-strings from memory with no notes. That is the first real test of whether any of this stuck.
 
 ## Getting and Understanding
 

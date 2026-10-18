@@ -1,12 +1,12 @@
 ---
 title: "Day 001: Predict, Then Run"
-date: 2026-10-17T20:30:00-04:00
-draft: true
+date: 2026-10-18T18:00:00-04:00
+draft: false
 tags: ["python", "lpthw", "security", "ai", "prompt-injection", "lessons-0-5"]
 description: "Six lessons of Learn Python the Hard Way, one floor division miss, and a PINEAPPLE in a comment."
 ---
 
-Six lessons today. Zero through five of *Learn Python the Hard Way, 5th Edition*. Every line typed by hand. Every output written down before I ran it. The why behind all of that is in the [Forge Log](/forge-log/2026-10-17-why-i-stopped-hacking-things-together/).
+Six lessons on Saturday. Zero through five of *Learn Python the Hard Way, 5th Edition*. Every line typed by hand. Every output written down before I ran it. The why behind all of that is in the [Forge Log](/forge-log/2026-10-17-why-i-stopped-hacking-things-together/).
 
 ## What I Did
 
@@ -85,7 +85,7 @@ That is three tools, one easy case, and only my own files. It tells me nothing a
 
 ## What Is Next
 
-Tracking starts Monday, October 19. Lesson 6 is Wednesday. On Saturday, October 24, I explain f-strings from memory, no notes, and find out whether the one-week recall holds.
+Tracking starts tomorrow, Monday, October 19. Lesson 6 is Wednesday. On Saturday, October 24, I explain f-strings from memory, no notes, and find out whether the one-week recall holds.
 
 Overnight question: an f-string only evaluates what is written in the source file. So what can go wrong when a user gets to write the format string itself, with `str.format`?
 
