@@ -54,6 +54,8 @@ For positive numbers, chopping and rounding down land in the same place, so the 
 
 Negative numbers expose it. `-7 / 2` is `-3.5`. Chopping gives `-3`. Rounding down goes further left, to `-4`. Python rounds down.
 
+That is my first pass, and I got it wrong before I got it right. The real test is saying it cold a week from now.
+
 ## Hacker Connection
 
 Four things, all from lesson zero through five.

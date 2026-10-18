@@ -7,7 +7,7 @@ tags: ["forge-log", "python", "learning", "ai", "agents", "faith"]
 description: "I sat a Python baseline with no code and no AI, missed two classic traps, and built a coach instead of reaching for another shortcut."
 ---
 
-Today around noon I sat down with three Python problems, a chat window, and one rule. No running code. No AI help. I wanted to see what was actually in my head before I built anything to coach me.
+Today I sat down with three Python problems, a chat window, and one rule. No running code. No AI help. I wanted to see what was actually in my head before I built anything to coach me.
 
 ## The Baseline
 
@@ -56,9 +56,9 @@ Working is not the same as knowing. So I stopped learning by hacking things toge
 
 ## The Coach
 
-**CAM:** One or two lines on what the coach runs on and how it fits with the rest of the bot team, in the words you would use in public.
+The coach is a skill coach I set up in Grok Bot, the coordinator that runs the rest of my AI bot team. It is built on two things: Zed Shaw's book and a skills gap assessment of me. Its instructions are to build me out with security and AI along the way, not just Python.
 
-It did not start from a generic beginner profile. It started from a file of my real record: what I am strong at, where I have gaps, how I learn, the traps I fall into, and what comes before study time. Every rule it runs answers one of those traps.
+That assessment is my real record, not a generic beginner profile: what I am strong at, where I have gaps, how I learn, the traps I fall into, and what comes before study time. Every rule the coach runs answers one of those traps.
 
 **I rush.** So every exercise gets typed by hand, and I write down what I think it will print before I run it. Prediction first. No exceptions.
 
